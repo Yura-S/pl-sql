@@ -17,7 +17,7 @@ SELECT a.*, b.* FROM table1 a
 JOIN table2 b ON a.user_id = b.user_id
 --WHERE 1 = 1
 
-------------------------------------------------------SIMPLE CREATE, EXECUTE, DELETE PROCEDURE
+------------------------------------------------------SIMPLE CREATE, EXECUTE, DELETE FUNCTION
 CREATE OR REPLACE FUNCTION my_function(input_string NUMBER)
 RETURN NUMBER
 IS
