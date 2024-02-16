@@ -18,6 +18,22 @@ JOIN table2 b ON a.user_id = b.user_id
 --WHERE 1 = 1
 
 ------------------------------------------------------SIMPLE CREATE, EXECUTE, DELETE PROCEDURE
+CREATE OR REPLACE FUNCTION my_function(input_string NUMBER)
+RETURN NUMBER
+IS
+inputs_squere NUMBER;
+BEGIN
+  inputs_squere := input_string * input_string;
+  RETURN inputs_squere;
+END;
+/
+  
+SELECT my_function(10) FROM DUAL
+
+DROP FUNCTION my_function
+
+
+------------------------------------------------------SIMPLE CREATE, EXECUTE, DELETE PROCEDURE
 CREATE OR REPLACE PROCEDURE my_procedure_name --IF HAVE ARGUMENTS ADD THEM IN ()
 AS
 var1 VARCHAR(32767);
